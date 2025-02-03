@@ -1,0 +1,15 @@
+.nav-1{
+  border:2px solid red;
+  padding: 2rem;
+  height: 10vh;
+}
+.nav-2{
+  border:2px solid green;
+  padding: 2rem;
+  background-color: aqua;
+  height: 100vh;
+}
+.layout{
+  display: flex;
+  justify-content: space-between;
+}
