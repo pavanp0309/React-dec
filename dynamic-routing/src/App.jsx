@@ -9,6 +9,7 @@ import TrendingCourses from "./pages/TrendingCourses";
 import Courses from "./pages/Courses";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import CourseDetails from "./pages/CourseDetails";
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
       {/* static Routing */}
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* dynamic Routing */}
+        <Route path="/:id" element={<CourseDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
