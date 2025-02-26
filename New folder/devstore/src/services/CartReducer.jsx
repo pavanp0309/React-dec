@@ -1,6 +1,6 @@
 
 export let initialState={
-    cart:localStorage.getItem("cart")||[]
+    cart:JSON.parse(localStorage.getItem("cart"))||[]
 }
 
 const CartReducer=(state,action)=>{
@@ -14,7 +14,7 @@ const CartReducer=(state,action)=>{
           
     
         default:
-           return 
+           return state
     }
 
 }

@@ -1,12 +1,13 @@
 import { useState,useEffect,createContext,useContext,useReducer } from "react"
 import { initialState } from "../services/CartReducer"
+import CartReducer from "../services/CartReducer"
 
 // step1: creating the Store for the Products
 export const ProductStore=createContext()
 
 const Appstore = ({children}) => {
 //   logic for data (useReducer Hook)
-const [state,dispatch]=useReducer(reducer,initialState)
+const [state,dispatch]=useReducer(CartReducer,initialState)
 
 // useEffect for Handling the sideEffect caused while updatind delteing adding rendering of the store
 useEffect(()=>{
