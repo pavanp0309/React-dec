@@ -14,7 +14,7 @@ const CartReducer = (state, action) => {
       }
 
     case "REMOVE_ITEM":
-        return {...state,cart:state.cart.map((item)=>(item.id !== action.payload.id))}
+        return {...state,cart:state.cart.filter((item)=>(item.id !== action.payload.id))}
     case "INCREMENT_ITEM":
         return {...state,cart:state.cart.map((item)=>(item.id === action.payload.id?{...item,quantity:item.quantity+1}:item))}
     case "DECREMENT_ITEM":
