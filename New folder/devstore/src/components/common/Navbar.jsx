@@ -32,8 +32,14 @@ const Navbar = () => {
 {/* login button */}
 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 <li className="nav-item">
+   
     <button className='btn btn-success' onClick={()=>navigate("/login")}>login</button>
 </li>
+<li className="nav-item">
+   
+<NavLink className="nav-link active" to={"/cart"}>🛒 </NavLink>
+</li>
+
 </ul>
     </div>
   </div>
