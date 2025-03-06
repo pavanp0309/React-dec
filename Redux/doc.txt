@@ -1,0 +1,4 @@
+// commonjs pattern
+const {createStore}=require("redux")
+// module js
+// import { createStore } from "redux"
