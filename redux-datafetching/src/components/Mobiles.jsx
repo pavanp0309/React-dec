@@ -3,7 +3,8 @@ import { useSelector,useDispatch } from 'react-redux'
 import { ADD_ITEM,addItem } from '../actions/freshItemsActions'
 
 const Mobiles = () => {
-    const items=useSelector(state=>state.freshitems) // it subscribsse to the store state value
+    const items=useSelector(state=>state.freshCartReducer.freshitems) // it subscribsse to the store state value
+    const item1=useSelector(state=>console.log(state.mobileCartReducer.mobileitems)) // it subscribsse to the store state value
  console.log(items)
 
 //  function to dispatch actions
