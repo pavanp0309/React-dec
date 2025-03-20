@@ -13,7 +13,8 @@ console.log(data)
   if(isError)return <h1>error...</h1>
 
   return (
-    <div className='row'>
+  <div className="container">
+      <div className='row gy-2'>
       {
         data.map((ele)=>(
           <div className="col-sm-12 col-md-3 col-lg-3" key={ele.id}>
@@ -22,6 +23,7 @@ console.log(data)
         ))
       }
     </div>
+  </div>
   )
 }
 
