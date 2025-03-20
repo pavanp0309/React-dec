@@ -1,29 +1,23 @@
 import React from 'react'
-import { useGetUsersQuery } from './api/userApi'
-import UserCard from './components/UserCard'
+import { Routes,Route } from 'react-router-dom'
+import UserList from './components/UserList'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import UserDeatils from './components/UserDeatils'
 
 const App = () => {
-  const {
-    data,
-    isLoading,
-    isError
-  }=useGetUsersQuery()
-console.log(data)
-  if(isLoading)return <h1>loading...</h1>
-  if(isError)return <h1>error...</h1>
+
 
   return (
-  <div className="container">
-      <div className='row gy-2'>
-      {
-        data.map((ele)=>(
-          <div className="col-sm-12 col-md-3 col-lg-3" key={ele.id}>
-            <UserCard user={ele}/>
-          </div>
-        ))
-      }
-    </div>
-  </div>
+  <>
+    <Navbar/>
+   <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/user" element={<UserList/>}/>
+    {/* dynamic routiasdng */}
+    <Route path="/user/:userId" element={<UserDeatils/>}/>
+   </Routes> 
+  </>
   )
 }
 
